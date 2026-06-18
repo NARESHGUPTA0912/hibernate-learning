@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="3.0"
+    xmlns="https://jakarta.ee/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                        https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="hibernate">
+    
+	    <!-- HibernateProvider -->
+	    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+	    <class>com.teknifity.unidirectional_hibernate_mapping.one_to_one_entity.Person</class>
+		<class>com.teknifity.unidirectional_hibernate_mapping.one_to_one_entity.Passport</class>
+	    
+        <!-- Entity Classes -->
+        <!-- Add all your entity classes here -->
+        <!-- Example -->
+        <!-- <class>com.teknifity.entity.Student</class> -->
+
+        <properties>
+
+			<!-- Database Configuration -->
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="com.mysql.cj.jdbc.Driver"/>
+
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mysql://localhost:3306/hibernate-unidirectional"/>
+
+            <property name="jakarta.persistence.jdbc.user"
+                      value="root"/>
+
+            <property name="jakarta.persistence.jdbc.password"
+                      value="Naresh@0912"/>
+
+			<!-- Hibernate-Properties -->
+			<property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQLDialect"/>
+                      
+            <property name="hibernate.hbm2ddl.auto"
+                      value="update"/>
+
+            <property name="hibernate.show_sql"
+                      value="true"/>
+                      
+	        <property name="hibernate.format_sql" value="true" />
+
+        </properties>
+    </persistence-unit>
+</persistence>

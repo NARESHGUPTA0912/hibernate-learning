@@ -1,0 +1,19 @@
+# Eclipse
+.project
+.classpath
+.metadata/
+.settings/
+.factorypath
+
+# Maven
+target/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+Servers/
+hibrnate-relationship-mapping/
